@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متن‌های جایگزین لورم ایپسوم</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>متن‌های جایگزین لورم ایپسوم</h1>
+        <p class="description">انتخاب کنید چه نوع متنی و با چند پاراگراف نیاز دارید تا تولید شود</p>
+    </header>
+
+    <div class="controls">
+        <div class="control-group">
+            <label class="control-label" for="text-type">نوع متن</label>
+            <select id="text-type">
+                <option value="history">تاریخ و تمدن</option>
+                <option value="science">علم و فناوری</option>
+                <option value="nature">طبیعت و محیط زیست</option>
+                <option value="art">هنر و ادبیات</option>
+                <option value="philosophy">فلسفه و اندیشه</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="paragraphs">تعداد پاراگراف‌ها</label>
+            <select id="paragraphs">
+                <option value="1">۱ پاراگراف</option>
+                <option value="2" selected>۲ پاراگراف</option>
+                <option value="3">۳ پاراگراف</option>
+                <option value="4">۴ پاراگراف</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <button class="generate-btn" onclick="generateText()">
+                <i class="fas fa-magic"></i> تولید متن
+            </button>
+        </div>
+    </div>
+
+    <div class="texts-container">
+        <h2 class="text-title" id="selected-title">تاریخ و تمدن</h2>
+        <div class="text-content" id="generated-text"></div>
+
+        <div class="actions">
+            <button class="action-btn copy-btn" onclick="copyText()">
+                <i class="far fa-copy"></i> کپی متن
+            </button>
+            <button class="action-btn new-btn" onclick="generateText()">
+                <i class="fas fa-sync-alt"></i> تولید متن جدید
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="notification" id="notification">
+    <i class="fas fa-check-circle"></i>
+    <span>متن با موفقیت کپی شد!</span>
+</div>
+<footer style="margin-top: 40px; text-align: center; padding: 20px 10px; font-size: 0.9rem; color: #555; background: #f8f9fa; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+    <p>© 2025 تمام حقوق محفوظ است | پروژه ساخته شده توسط <strong>Ali Lotfi</strong></p>
+    <p>
+        <a href="https://github.com/AliLotfi09" target="_blank" style="color: #007bff; text-decoration: none; transition: 0.2s;">GitHub</a> |
+        <a href="https://github.com/AliLotfi09/don-t-use-lorem-ipsum" target="_blank" style="color: #007bff; text-decoration: none; transition: 0.2s;">Repository</a>
+    </p>
+</footer>
+
+<script src="index.js" defer></script>
+</body>
+</html>
